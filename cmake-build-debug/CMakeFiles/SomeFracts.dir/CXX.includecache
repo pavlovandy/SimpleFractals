@@ -32,6 +32,12 @@ cmplxnum.h
 cstdlib
 -
 
+/home/anri/CLionProjects/SomeFracts/sdl-library.cpp
+sdl-library.h
+/home/anri/CLionProjects/SomeFracts/sdl-library.h
+stdexcept
+-
+
 /home/anri/CLionProjects/SomeFracts/sdl-library.h
 SDL.h
 -

@@ -1,4 +1,22 @@
 /snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/anri/CLionProjects/SomeFracts
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found SDL2: /usr/lib/x86_64-linux-gnu/libSDL2.so (found version "2.0.8") 
+-- Found SDL2main: /usr/lib/x86_64-linux-gnu/libSDL2main.a (found version "2.0.8") 
+-- Found SDL2_image: /usr/lib/x86_64-linux-gnu/libSDL2_image.so (found version "2.0.3") 
+-- Found SDL2_ttf: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so (found version "2.0.14") 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/anri/CLionProjects/SomeFracts/cmake-build-debug

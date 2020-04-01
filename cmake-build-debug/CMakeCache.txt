@@ -220,9 +220,6 @@ ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 //Where the SDL2main library can be found
 SDL2MAIN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2main.a
 
-//The directory containing a CMake configuration file for SDL2.
-SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
-
 //Where the SDL2_image headers can be found
 SDL2_IMAGE_INCLUDE_DIR:PATH=/usr/include/SDL2
 
@@ -258,9 +255,6 @@ SDL2_TTF_NO_DEFAULT_PATH:BOOL=OFF
 
 //Custom SDL2_ttf Library path
 SDL2_TTF_PATH:STRING=
-
-//The directory containing a CMake configuration file for SDL2_image.
-SDL2_image_DIR:PATH=SDL2_image_DIR-NOTFOUND
 
 //Value Computed by CMake
 SomeFracts_BINARY_DIR:STATIC=/home/anri/CLionProjects/SomeFracts/cmake-build-debug
