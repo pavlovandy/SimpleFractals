@@ -8,10 +8,11 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
+#include <vector>
 #include <cstdlib>
 
-const std::size_t WIN_WIDTH = 1200;
-const std::size_t WIN_HEIGHT = 720;
+const std::size_t WIN_WIDTH = 2000;
+const std::size_t WIN_HEIGHT = 1200;
 
 class SDL_Library {
 public:
@@ -20,10 +21,8 @@ public:
 	SDL_Library(const SDL_Library &) = delete;
 	SDL_Library & operator=(const SDL_Library &) = delete;
 
-
-
-	inline void DrawCanvas(unsigned*   pixels) {
-		SDL_UpdateTexture(texture_, nullptr, pixels, 4 * WIN_WIDTH);
+	inline void DrawCanvas(std::vector<unsigned >&   pixels) {
+		SDL_UpdateTexture(texture_, nullptr, pixels.data(), 4 * WIN_WIDTH);
 		SDL_RenderCopy(renderer, texture_, nullptr, nullptr);
 		SDL_RenderPresent(renderer);
 	}

@@ -7,6 +7,7 @@
 
 #include "cmplxnum.h"
 #include <cstdlib>
+#include <vector>
 
 extern const std::size_t    WIN_WIDTH;
 extern const std::size_t    WIN_HEIGHT;
@@ -14,11 +15,15 @@ extern const std::size_t    WIN_HEIGHT;
 class MandelbrhotSet {
 public:
 	MandelbrhotSet(cmplxnum start) : zstart(start) {}
-	void    IterateThroughArray(unsigned*  pixels);
+	void    IterateThroughArray(std::vector<unsigned > &  pixels);
 
 	void    ChangeFirstValue(double x, double y);
 
-	inline cmplxnum    MapScreenCoordsWithPlane(int x, int y) {
+	inline void ChangeMeasures(double dy) {
+
+	}
+
+	inline cmplxnum    MapScreenCoordsWithPlane(unsigned x, unsigned y) {
 		return {LeftTopCornerCoord[0] + x * ScreenScale[0],
 				         LeftTopCornerCoord[1] + y * ScreenScale[1]};
 	}
@@ -26,7 +31,7 @@ public:
 private:
 	cmplxnum    zstart;
 	double    LeftTopCornerCoord[2] = {-2.0, 1.0};
-	double    ScreenScale[2] = {-(LeftTopCornerCoord[0] - 1.0) / WIN_WIDTH, -(LeftTopCornerCoord[1] + 1.0) / WIN_HEIGHT};
+	double    ScreenScale[2] = {-(LeftTopCornerCoord[0] - 2.0) / WIN_WIDTH, -(LeftTopCornerCoord[1] + 1.0) / WIN_HEIGHT};
 };
 
 #endif //SOMEFRACTS_MANDELBRHOT_H
