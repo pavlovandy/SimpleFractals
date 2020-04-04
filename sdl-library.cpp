@@ -6,7 +6,7 @@
 #include <stdexcept>
 
 SDL_Library::SDL_Library()  {
-	if (SDL_Init(SDL_INIT_EVERYTHING) < 0 || TTF_Init() == -1)
+	if (SDL_Init(SDL_INIT_EVERYTHING) < 0 || TTF_Init() == -1 || IMG_Init(IMG_INIT_JPG) != IMG_INIT_JPG)
 		throw std::runtime_error(SDL_GetError());
 	if (!(window_ = SDL_CreateWindow("BasicFracts", SDL_WINDOWPOS_CENTERED, \
 		SDL_WINDOWPOS_CENTERED, WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_SHOWN)))
@@ -25,6 +25,7 @@ SDL_Library::~SDL_Library() {
 	TTF_Quit();
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyTexture(texture_);
+	IMG_Quit();
 	SDL_Quit();
 }
 

@@ -26,7 +26,7 @@ inline cmplxnum    operator*(const cmplxnum& rhs, const cmplxnum& lhs) {
 	return {rhs.Re * lhs.Re - rhs.Im * lhs.Im, rhs.Re * lhs.Im + rhs.Im * lhs.Re };
 }
 
-inline cmplxnum    sqrt(const cmplxnum& rhs) {
+inline cmplxnum    cmlxsqr(const cmplxnum& rhs) {
 	return {(rhs.Re - rhs.Im) * (rhs.Re + rhs.Im) , 2 * rhs.Re * rhs.Im};
 }
 
